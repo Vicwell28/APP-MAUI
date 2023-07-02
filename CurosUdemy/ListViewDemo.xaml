@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CurosUdemy.ListViewDemo"
+             Title="ListViewDemo">
+    <ListView HasUnevenRows="True">
+        <ListView.ItemsSource>
+            <x:Array Type="{x:Type x:String}">
+                <x:String>mono</x:String>
+                <x:String>monodroid</x:String>
+                <x:String>monotouch</x:String>
+                <x:String>monorail</x:String>
+                <x:String>monodevelop</x:String>
+                <x:String>monotone</x:String>
+                <x:String>monopoly</x:String>
+                <x:String>monomodal</x:String>
+                <x:String>mononucleosis</x:String>
+            </x:Array>
+        </ListView.ItemsSource>
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout>
+                        <Frame
+                            Margin="20"
+                            BorderColor="DarkGray"
+                            CornerRadius="5"
+                            HasShadow="True"
+                            HeightRequest="100"
+                            HorizontalOptions="Center"
+                            VerticalOptions="CenterAndExpand">
+                            <Label Text="{Binding .}" />
+                        </Frame>
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>

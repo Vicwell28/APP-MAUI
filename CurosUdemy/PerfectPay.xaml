@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CurosUdemy.PerfectPay"
+             Title="PerfectPay"
+             BackgroundColor="#323232">
+
+    <ContentPage.Resources>
+        <Color x:Key="SectionsColor">#444444</Color>
+        <Color x:Key="LightFont">#d6d6d6</Color>
+        <Color x:Key="DarkFont">#4fd8eb</Color>
+    </ContentPage.Resources>
+
+    <Grid
+        Padding="10"
+        RowSpacing="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"></RowDefinition>
+            <RowDefinition Height="7*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Frame Grid.Row="0" BackgroundColor="{StaticResource SectionsColor}" CornerRadius="10" Padding="5">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2*"></RowDefinition>
+                    <RowDefinition Height="8*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Label
+                    Grid.Row="0"
+                    Text="Total P/Persona"
+                    HorizontalTextAlignment="Center"
+                    VerticalTextAlignment="Center"
+                    FontSize="Large"
+                    FontAttributes="Bold"
+                    TextColor="{StaticResource DarkFont}"
+                    ></Label>
+                <Frame 
+                    Grid.Row="1"
+                    BackgroundColor="Transparent"
+                    BorderColor="Transparent"
+                    >
+                    <Grid ColumnSpacing="2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="4*"></ColumnDefinition>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                            <ColumnDefinition Width="4*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Label 
+                            Grid.Column="0"
+                            TextColor="White"
+                            HorizontalTextAlignment="Center"
+                            VerticalTextAlignment="Center"
+                            FontAttributes="Bold"
+                            FontSize="50"
+                            Text="$0.00"></Label>
+
+                        <BoxView Grid.Column="1" BackgroundColor="White" WidthRequest="2" VerticalOptions="FillAndExpand" />
+
+                        <VerticalStackLayout
+                            Grid.Column="2"
+                            VerticalOptions="Center"
+                            HorizontalOptions="Center"
+                            Spacing="10">
+                            <VerticalStackLayout>
+                                <Label 
+                                TextColor="White"
+                                Text="SUBTOTAL"
+                                FontSize="20"
+                                FontAttributes="Bold"
+                            ></Label>
+                                <Label 
+                                TextColor="White"
+                                Text="$0.00"
+                                FontSize="18"
+                                FontAttributes="Bold"
+                            ></Label>
+                            </VerticalStackLayout>
+                            <VerticalStackLayout>
+                                <Label 
+                                TextColor="White"
+                                Text="Tip"
+                                FontSize="20"
+                                FontAttributes="Bold"
+                            ></Label>
+                                <Label 
+                                TextColor="White"
+                                Text="$0.00"
+                                FontSize="18"
+                                FontAttributes="Bold"
+                            ></Label>
+                            </VerticalStackLayout>
+                        </VerticalStackLayout>
+                    </Grid>
+
+                </Frame>
+            </Grid>
+        </Frame>
+
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" Padding="10" ColumnSpacing="5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*"></ColumnDefinition>
+                    <ColumnDefinition Width="7*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Label Text="Hola" BackgroundColor="Orange" Grid.Column="0" VerticalOptions="Center"></Label>
+                <Label Text="Hola" BackgroundColor="Orange" Grid.Column="1" VerticalOptions="Center"></Label>
+            </Grid>
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" Padding="10" ColumnSpacing="5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*"></ColumnDefinition>
+                    <ColumnDefinition Width="7*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Label Text="Hola" BackgroundColor="Orange" Grid.Column="0" VerticalOptions="Center"></Label>
+                <Label Text="Hola" BackgroundColor="Orange" Grid.Column="1" VerticalOptions="Center"></Label>
+            </Grid>
+
+            <Grid Grid.Row="1" Padding="10" ColumnSpacing="5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*" />
+                    <ColumnDefinition Width="7*" />
+                </Grid.ColumnDefinitions>
+                <Label Text="Hola" BackgroundColor="Orange" Grid.Column="0" VerticalOptions="Center" />
+                <Grid Grid.Column="1" ColumnSpacing="5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2.5*" />
+                        <ColumnDefinition Width="2.5*" />
+                        <ColumnDefinition Width="2.5*" />
+                        <ColumnDefinition Width="2.5*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Button Text="Hola" Grid.Column="0"  HeightRequest="100" />
+                    <Button Text="Hola" Grid.Column="1" BackgroundColor="Transparent" HeightRequest="100" />
+                    <Button Text="Hola" Grid.Column="2" BackgroundColor="Transparent" HeightRequest="100" />
+                    <Button Text="Hola" Grid.Column="3" BackgroundColor="Transparent" HeightRequest="100" />
+                </Grid>
+            </Grid>
+
+
+            <Grid Grid.Row="2" Padding="10" ColumnSpacing="5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*"></ColumnDefinition>
+                    <ColumnDefinition Width="7*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Label Text="Hola" BackgroundColor="Orange" Grid.Column="0" VerticalOptions="Center"></Label>
+                <Label Text="Hola" BackgroundColor="Orange" Grid.Column="1" VerticalOptions="Center"></Label>
+            </Grid>
+
+            <Grid Grid.Row="3" Padding="10" ColumnSpacing="5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*"></ColumnDefinition>
+                    <ColumnDefinition Width="7*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Label Text="Hola" BackgroundColor="Orange" Grid.Column="0" VerticalOptions="Center"></Label>
+                <Label Text="Hola" BackgroundColor="Orange" Grid.Column="1" VerticalOptions="Center"></Label>
+            </Grid>
+        </Grid>
+        
+
+
+        <!--<Frame Grid.Row="1" BackgroundColor="Transparent" BorderColor="Transparent" CornerRadius="10" Padding="5">
+            <VerticalStackLayout Spacing="10" VerticalOptions="FillAndExpand" BackgroundColor="Red">
+                <Grid VerticalOptions="FillAndExpand" BackgroundColor="AliceBlue">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="3.5*" />
+                        <ColumnDefinition Width="6.5*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Text="Enter your bill: $" Grid.Column="0" BackgroundColor="Orange" />
+                    <Label Text="Enter your bill: $" Grid.Column="1" BackgroundColor="Yellow" />
+                </Grid>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="3.5*" />
+                        <ColumnDefinition Width="6.5*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Text="Enter your bill: $" Grid.Column="0" BackgroundColor="Orange" />
+                    <Label Text="Enter your bill: $" Grid.Column="1" BackgroundColor="Yellow" />
+                </Grid>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="3.5*" />
+                        <ColumnDefinition Width="6.5*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Text="Enter your bill: $" Grid.Column="0" BackgroundColor="Orange" />
+                    <Label Text="Enter your bill: $" Grid.Column="1" BackgroundColor="Yellow" />
+                </Grid>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="3.5*" />
+                        <ColumnDefinition Width="6.5*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Text="Enter your bill: $" Grid.Column="0" BackgroundColor="Orange" />
+                    <Label Text="Enter your bill: $" Grid.Column="1" BackgroundColor="Yellow" />
+                </Grid>
+            </VerticalStackLayout>
+
+        </Frame>-->
+
+
+
+
+    </Grid>
+
+</ContentPage>

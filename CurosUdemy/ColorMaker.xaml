@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CurosUdemy.ColorMaker"
+             Title="ColorMaker">
+
+
+    <ContentPage.Resources>
+        <Color x:Key="Primary">#ab3527</Color>
+        <Color x:Key="Secondary">#775752</Color>
+        <Color x:Key="Tertiary">#705c5e</Color>
+    </ContentPage.Resources>
+
+
+    <Grid
+        x:Name="Container"
+        BackgroundColor="Black"
+        Padding="10">
+
+        <Frame
+            VerticalOptions="Center">
+
+            <VerticalStackLayout
+                Spacing="20">
+
+                <Label
+                Text="Color Maker"
+                FontAttributes="Bold"
+                FontSize="Large"
+                HorizontalTextAlignment="Center"></Label>
+
+                <Label
+                    Text="Red Value: "></Label>
+                <Slider
+                    x:Name="sldRed"
+                    MaximumTrackColor="{StaticResource Tertiary}"
+                    MinimumTrackColor="{StaticResource Secondary}"
+                    ThumbColor="{StaticResource Primary}"
+                    ValueChanged="sld_ValueChanged"></Slider>
+
+                <Label
+                    Text="Green Value: "></Label>
+                <Slider
+                    x:Name="sldGreen"
+                    MaximumTrackColor="{StaticResource Tertiary}"
+                    MinimumTrackColor="{StaticResource Secondary}"
+                    ThumbColor="{StaticResource Primary}"
+                    ValueChanged="sld_ValueChanged"></Slider>
+
+                <Label
+                    Text="Blue Value: "></Label>
+                <Slider
+                    x:Name="sldBlue"
+                    MaximumTrackColor="{StaticResource Tertiary}"
+                    MinimumTrackColor="{StaticResource Secondary}"
+                    ThumbColor="{StaticResource Primary}"
+                    ValueChanged="sld_ValueChanged"></Slider>
+
+                <Frame
+                    CornerRadius="25"
+                    HorizontalOptions="Center">
+                    <HorizontalStackLayout 
+                        Spacing="10">
+                        <Label
+                            x:Name="hexa"
+                            Text="HEX Value: #000000"
+                            HorizontalOptions="End"
+                            VerticalOptions="Center"></Label>
+                        <ImageButton
+                            HeightRequest="25"
+                            Source="dotnet_bot.svg"
+                            VerticalOptions="Center"
+                            WidthRequest="25"
+                            Clicked="ImageButton_Clicked">
+                        </ImageButton>
+                    </HorizontalStackLayout>
+                </Frame>
+
+                <Button
+                    x:Name="randomColor"
+                    Text="Generate Random Color"
+                    Clicked="randomColor_Clicked"></Button>
+            </VerticalStackLayout>
+
+        </Frame>
+
+    </Grid>
+    
+</ContentPage>
