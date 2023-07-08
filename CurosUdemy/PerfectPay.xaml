@@ -46,12 +46,13 @@
                             <ColumnDefinition Width="4*"></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Label 
+                            x:Name="lblTotalbyPerson"
                             Grid.Column="0"
                             TextColor="White"
                             HorizontalTextAlignment="Center"
                             VerticalTextAlignment="Center"
                             FontAttributes="Bold"
-                            FontSize="50"
+                            FontSize="30"
                             Text="$0.00"></Label>
 
                         <BoxView Grid.Column="1" BackgroundColor="White" WidthRequest="2" VerticalOptions="FillAndExpand" />
@@ -69,6 +70,7 @@
                                 FontAttributes="Bold"
                             ></Label>
                                 <Label 
+                                x:Name="lblSubtotalByPerson"
                                 TextColor="White"
                                 Text="$0.00"
                                 FontSize="18"
@@ -83,6 +85,7 @@
                                 FontAttributes="Bold"
                             ></Label>
                                 <Label 
+                                 x:Name="lblTipByPerson"
                                 TextColor="White"
                                 Text="$0.00"
                                 FontSize="18"
@@ -97,125 +100,127 @@
         </Frame>
 
         <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width=".3*"></ColumnDefinition>
+                <ColumnDefinition Width=".7*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"></RowDefinition>
                 <RowDefinition Height="*"></RowDefinition>
                 <RowDefinition Height="*"></RowDefinition>
                 <RowDefinition Height="*"></RowDefinition>
             </Grid.RowDefinitions>
-            <Grid Grid.Row="0" Padding="10" ColumnSpacing="5">
+
+            <!--FILA 1-->
+            <Label 
+                Grid.Column="0"  
+                Grid.Row="0" 
+                Text="Enter your bill: " 
+                TextColor="{StaticResource LightFont}"
+                VerticalOptions="Center"></Label>
+            <Entry  
+                Grid.Column="1" 
+                Grid.Row="0" 
+                Placeholder="$0.00" 
+                VerticalOptions="Center" 
+                TextColor="White" 
+                BackgroundColor="{StaticResource SectionsColor}" 
+                Keyboard="Numeric"
+                TextChanged="entryBill_TextChanged"></Entry>
+
+            <!--FILA 2-->
+            <Label 
+                Grid.Column="0"  
+                Grid.Row="1" 
+                Text="Choose your tip" 
+                TextColor="{StaticResource LightFont}"
+                VerticalOptions="Center" />
+            <Grid 
+                Grid.Column="1"  
+                Grid.Row="1" 
+                ColumnSpacing="5">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="3*"></ColumnDefinition>
-                    <ColumnDefinition Width="7*"></ColumnDefinition>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
-                <Label Text="Hola" BackgroundColor="Orange" Grid.Column="0" VerticalOptions="Center"></Label>
-                <Label Text="Hola" BackgroundColor="Orange" Grid.Column="1" VerticalOptions="Center"></Label>
+                <Button 
+                    Text="10%"
+                    Grid.Column="0" 
+                    HeightRequest="100"
+                    BindingContext="10"
+                    Clicked="Button_Clicked"/>
+                <Button 
+                    Text="15%" 
+                    Grid.Column="1"
+                    HeightRequest="100"
+                    BindingContext="15"
+                    Clicked="Button_Clicked"/>
+                <Button 
+                    Text="20%" 
+                    Grid.Column="2" 
+                    HeightRequest="100"
+                    BindingContext="20"
+                    Clicked="Button_Clicked"/>
+            </Grid>
+
+            <!--FILA 3-->
+            <Label 
+                Grid.Column="0" 
+                Grid.Row="2" 
+                x:Name="lblTip"
+                Text="Tip: 0%"
+                TextColor="{StaticResource LightFont}"
+                VerticalOptions="Center"></Label>
+
+            <Slider 
+                Grid.Column="1" 
+                Grid.Row="2"
+                x:Name="sldTip"
+                Minimum="0" 
+                Maximum="100" 
+                Value="0"
+                ValueChanged="sldTip_ValueChanged"></Slider>
+
+            <!--FILA 4-->
+            <Label 
+                Grid.Column="0" 
+                Grid.Row="3" 
+                Text="Split the total"
+                TextColor="{StaticResource LightFont}"
+                VerticalOptions="Center"></Label>
+
+            <Grid 
+                Grid.Column="1" 
+                Grid.Row="3" 
+                VerticalOptions="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width=".4*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width=".4*" />
+                </Grid.ColumnDefinitions>
+
+                <Button 
+                    Text="-" 
+                    FontSize="20" 
+                    Clicked="btnSplitTotal_Clicked"/>
+                <Label 
+                    x:Name="lblSplitPersons"
+                    Text="1" 
+                    BackgroundColor="{StaticResource SectionsColor}" 
+                    HorizontalOptions="FillAndExpand" 
+                    Grid.Column="1" 
+                    FontSize="30" 
+                    TextColor="{StaticResource LightFont}" 
+                    HorizontalTextAlignment="Center" 
+                    VerticalTextAlignment="Center"/>
+                <Button 
+                    Grid.Column="2"
+                    Text="+"
+                    FontSize="20" 
+                    Clicked="btnSplitTotal_Clicked"/>
             </Grid>
         </Grid>
-
-        <Grid Grid.Row="1">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*"></RowDefinition>
-                <RowDefinition Height="*"></RowDefinition>
-                <RowDefinition Height="*"></RowDefinition>
-                <RowDefinition Height="*"></RowDefinition>
-            </Grid.RowDefinitions>
-            <Grid Grid.Row="0" Padding="10" ColumnSpacing="5">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="3*"></ColumnDefinition>
-                    <ColumnDefinition Width="7*"></ColumnDefinition>
-                </Grid.ColumnDefinitions>
-                <Label Text="Hola" BackgroundColor="Orange" Grid.Column="0" VerticalOptions="Center"></Label>
-                <Label Text="Hola" BackgroundColor="Orange" Grid.Column="1" VerticalOptions="Center"></Label>
-            </Grid>
-
-            <Grid Grid.Row="1" Padding="10" ColumnSpacing="5">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="3*" />
-                    <ColumnDefinition Width="7*" />
-                </Grid.ColumnDefinitions>
-                <Label Text="Hola" BackgroundColor="Orange" Grid.Column="0" VerticalOptions="Center" />
-                <Grid Grid.Column="1" ColumnSpacing="5">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="2.5*" />
-                        <ColumnDefinition Width="2.5*" />
-                        <ColumnDefinition Width="2.5*" />
-                        <ColumnDefinition Width="2.5*" />
-                    </Grid.ColumnDefinitions>
-
-                    <Button Text="Hola" Grid.Column="0"  HeightRequest="100" />
-                    <Button Text="Hola" Grid.Column="1" BackgroundColor="Transparent" HeightRequest="100" />
-                    <Button Text="Hola" Grid.Column="2" BackgroundColor="Transparent" HeightRequest="100" />
-                    <Button Text="Hola" Grid.Column="3" BackgroundColor="Transparent" HeightRequest="100" />
-                </Grid>
-            </Grid>
-
-
-            <Grid Grid.Row="2" Padding="10" ColumnSpacing="5">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="3*"></ColumnDefinition>
-                    <ColumnDefinition Width="7*"></ColumnDefinition>
-                </Grid.ColumnDefinitions>
-                <Label Text="Hola" BackgroundColor="Orange" Grid.Column="0" VerticalOptions="Center"></Label>
-                <Label Text="Hola" BackgroundColor="Orange" Grid.Column="1" VerticalOptions="Center"></Label>
-            </Grid>
-
-            <Grid Grid.Row="3" Padding="10" ColumnSpacing="5">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="3*"></ColumnDefinition>
-                    <ColumnDefinition Width="7*"></ColumnDefinition>
-                </Grid.ColumnDefinitions>
-                <Label Text="Hola" BackgroundColor="Orange" Grid.Column="0" VerticalOptions="Center"></Label>
-                <Label Text="Hola" BackgroundColor="Orange" Grid.Column="1" VerticalOptions="Center"></Label>
-            </Grid>
-        </Grid>
-        
-
-
-        <!--<Frame Grid.Row="1" BackgroundColor="Transparent" BorderColor="Transparent" CornerRadius="10" Padding="5">
-            <VerticalStackLayout Spacing="10" VerticalOptions="FillAndExpand" BackgroundColor="Red">
-                <Grid VerticalOptions="FillAndExpand" BackgroundColor="AliceBlue">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="3.5*" />
-                        <ColumnDefinition Width="6.5*" />
-                    </Grid.ColumnDefinitions>
-                    <Label Text="Enter your bill: $" Grid.Column="0" BackgroundColor="Orange" />
-                    <Label Text="Enter your bill: $" Grid.Column="1" BackgroundColor="Yellow" />
-                </Grid>
-
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="3.5*" />
-                        <ColumnDefinition Width="6.5*" />
-                    </Grid.ColumnDefinitions>
-                    <Label Text="Enter your bill: $" Grid.Column="0" BackgroundColor="Orange" />
-                    <Label Text="Enter your bill: $" Grid.Column="1" BackgroundColor="Yellow" />
-                </Grid>
-
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="3.5*" />
-                        <ColumnDefinition Width="6.5*" />
-                    </Grid.ColumnDefinitions>
-                    <Label Text="Enter your bill: $" Grid.Column="0" BackgroundColor="Orange" />
-                    <Label Text="Enter your bill: $" Grid.Column="1" BackgroundColor="Yellow" />
-                </Grid>
-
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="3.5*" />
-                        <ColumnDefinition Width="6.5*" />
-                    </Grid.ColumnDefinitions>
-                    <Label Text="Enter your bill: $" Grid.Column="0" BackgroundColor="Orange" />
-                    <Label Text="Enter your bill: $" Grid.Column="1" BackgroundColor="Yellow" />
-                </Grid>
-            </VerticalStackLayout>
-
-        </Frame>-->
-
-
-
-
     </Grid>
 
 </ContentPage>
