@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CurosUdemy.IconResources"
+             Title="IconResources">
+    <VerticalStackLayout Padding="20">
+        <Label Text="&#xE800;" FontFamily="fontello" FontSize="40"/>
+
+        <Image>
+            <Image.Source>
+                <FontImageSource
+                    FontFamily="fontello"
+                    Glyph="&#xE800;"
+                    Size="50">
+                </FontImageSource>
+            </Image.Source>
+        </Image>    
+
+    </VerticalStackLayout>
+</ContentPage>

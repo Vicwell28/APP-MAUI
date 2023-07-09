@@ -40,6 +40,7 @@
 		<!-- Images -->
 		<MauiImage Include="Resources\Images\*" />
 		<MauiImage Update="Resources\Images\dotnet_bot.svg" BaseSize="168,208" />
+		<MauiImage Update="Resources\Images\network.svg" BaseSize="800,800" />
 
 		<!-- Custom Fonts -->
 		<MauiFont Include="Resources\Fonts\*" />
@@ -49,10 +50,26 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Fonts\Bison.ttf" />
+	  <None Remove="Resources\Fonts\Creamer.ttf" />
+	  <None Remove="Resources\Fonts\fontello.ttf" />
+	  <None Remove="Resources\Images\loader.gif" />
+	  <None Remove="Resources\Images\network.svg" />
+	  <None Remove="Resources\Images\ok.png" />
+	  <None Remove="Resources\Images\shoe.jpg" />
+	  <None Remove="Resources\Images\sun.png" />
+	  <None Remove="Resources\Raw\quotes.txt" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="ColorUtility" Version="1.0.0" />
 	  <PackageReference Include="CommunityToolkit.Maui" Version="2.0.0" />
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="CodeQuotes.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="CollectonViewDemo.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -60,6 +77,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="ContentPageExample.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="ContentResources.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="ControlsComando.xaml">
@@ -71,10 +91,16 @@
 	  <MauiXaml Update="FlexLayoutDemo.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="FontResources.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="FyoutPageExample.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="GridDemo.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="IconResources.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="ListViewDemo.xaml">

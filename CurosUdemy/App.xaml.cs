@@ -12,6 +12,6 @@ public partial class App : Application
 
 		//MainPage = new TabbedPageExample();
 
-		MainPage = new PerfectPay();
+		MainPage = new CodeQuotes();
 	}
 }
