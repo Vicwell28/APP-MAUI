@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CurosUdemy.DataBindingDemo"
+             Title="DataBindingDemo"
+             xmlns:Models="clr-namespace:CurosUdemy.Models">
+
+    <!--ContentPage.Resources>
+        <Models:Person
+            x:Key="person"
+            Name="Victor"
+            Address="Some Address"
+            Phone="+50 8712655150"></Models:Person>
+                
+                Text="{Binding Name, Source={StaticResource person}}"
+    </ContentPage.Resources>-->
+    
+    <ScrollView>
+        <VerticalStackLayout Spacing="20">
+            <Entry Text="{Binding Name}" />
+
+            <Label
+            Text="{Binding Name}"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+            <Label
+            Text="{Binding Address}"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+            <Label
+            Text="{Binding Phone}"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+            <Button x:Name="CounterBtn"
+                    Text="Click me!"
+                    SemanticProperties.Hint="Counts the number of time"
+                    HorizontalOptions="Center"
+                    Clicked="OnCounterClicked"></Button>
+
+            <Entry></Entry>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

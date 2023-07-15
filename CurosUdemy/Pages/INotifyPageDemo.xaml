@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CurosUdemy.Pages.INotifyPageDemo"
+             Title="INotifyPageDemo">
+    <ScrollView>
+        <VerticalStackLayout Spacing="20">
+            <Entry Text="{Binding Name}" />
+
+            <Label
+            Text="{Binding Name}"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+            <Label
+            Text="{Binding Address}"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+            <Label
+            Text="{Binding Phone}"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+            <Button x:Name="CounterBtn"
+                    Text="Click me!"
+                    SemanticProperties.Hint="Counts the number of time"
+                    HorizontalOptions="Center"
+                    Clicked="OnCounterClicked"></Button>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

@@ -53,12 +53,29 @@
 	  <None Remove="Resources\Fonts\Bison.ttf" />
 	  <None Remove="Resources\Fonts\Creamer.ttf" />
 	  <None Remove="Resources\Fonts\fontello.ttf" />
+	  <None Remove="Resources\Images\Hangman\hangman0.jpg" />
+	  <None Remove="Resources\Images\Hangman\hangman1.jpg" />
+	  <None Remove="Resources\Images\Hangman\hangman2.jpg" />
+	  <None Remove="Resources\Images\Hangman\hangman3.jpg" />
+	  <None Remove="Resources\Images\Hangman\hangman4.jpg" />
+	  <None Remove="Resources\Images\Hangman\hangman5.jpg" />
+	  <None Remove="Resources\Images\Hangman\hangman6.jpg" />
 	  <None Remove="Resources\Images\loader.gif" />
 	  <None Remove="Resources\Images\network.svg" />
 	  <None Remove="Resources\Images\ok.png" />
 	  <None Remove="Resources\Images\shoe.jpg" />
 	  <None Remove="Resources\Images\sun.png" />
 	  <None Remove="Resources\Raw\quotes.txt" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiImage Include="Resources\Images\Hangman\hangman0.jpg" />
+	  <MauiImage Include="Resources\Images\Hangman\hangman1.jpg" />
+	  <MauiImage Include="Resources\Images\Hangman\hangman2.jpg" />
+	  <MauiImage Include="Resources\Images\Hangman\hangman3.jpg" />
+	  <MauiImage Include="Resources\Images\Hangman\hangman4.jpg" />
+	  <MauiImage Include="Resources\Images\Hangman\hangman5.jpg" />
+	  <MauiImage Include="Resources\Images\Hangman\hangman6.jpg" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -88,6 +105,9 @@
 	  <MauiXaml Update="ControlsDemo.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="DataBindingDemo.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="FlexLayoutDemo.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -104,6 +124,18 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="ListViewDemo.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\BindingModes.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Handgman\MainHangMan.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\INotifyPageDemo.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\SliderPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="PerfectPay.xaml">

@@ -1,4 +1,6 @@
 ﻿namespace CurosUdemy;
+using CurosUdemy.Pages;
+using CurosUdemy.Pages.Handgman;
 
 public partial class App : Application
 {
@@ -12,6 +14,6 @@ public partial class App : Application
 
 		//MainPage = new TabbedPageExample();
 
-		MainPage = new CodeQuotes();
+		MainPage = new MainHangMan();
 	}
 }
